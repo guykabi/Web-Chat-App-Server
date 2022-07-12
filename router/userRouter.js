@@ -19,12 +19,12 @@ require('dotenv').config()
  router.get('/:userId',async(req,resp)=> 
  { 
      try{
-            const user = await userModel.find({_id: req.params.userId})
-            resp.status(200).json(user) 
+              const user = await userModel.find({_id: req.params.userId})
+              resp.status(200).json(user) 
          
      }catch(err)
      {
-            resp.status(500).json(err) 
+              resp.status(500).json(err) 
      } 
      
  })
